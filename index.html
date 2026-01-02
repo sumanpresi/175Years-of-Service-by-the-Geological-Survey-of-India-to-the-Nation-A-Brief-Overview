@@ -11,13 +11,14 @@
 ```
     :root {
         --earth-brown: #8B4513;
-        --rock-grey: #4A4A4A;
+        --rock-grey: #2C2C2C;
         --mineral-gold: #D4AF37;
         --forest-green: #2C5F2D;
         --deep-ocean: #1A3A52;
         --light-stone: #E8DCC4;
         --warm-sand: #F5E6D3;
         --accent-copper: #B87333;
+        --text-dark: #1a1a1a;
     }
     
     * {
@@ -26,10 +27,21 @@
         box-sizing: border-box;
     }
     
+    p {
+        color: var(--text-dark);
+        line-height: 1.7;
+        margin-bottom: 0.8rem;
+    }
+    
+    strong {
+        color: #6B3410;
+        font-weight: 600;
+    }
+    
     body {
         font-family: 'Work Sans', sans-serif;
         background: linear-gradient(135deg, var(--warm-sand) 0%, var(--light-stone) 100%);
-        color: var(--rock-grey);
+        color: var(--text-dark);
         line-height: 1.6;
         overflow-x: hidden;
     }
@@ -84,7 +96,7 @@
     .year-badge {
         display: inline-block;
         background: var(--mineral-gold);
-        color: var(--rock-grey);
+        color: var(--text-dark);
         padding: 0.5rem 1.5rem;
         border-radius: 30px;
         font-weight: 600;
@@ -117,7 +129,7 @@
     }
     
     nav a {
-        color: var(--rock-grey);
+        color: var(--text-dark);
         text-decoration: none;
         padding: 0.5rem 1.2rem;
         border-radius: 8px;
@@ -166,7 +178,7 @@
     h3 {
         font-family: 'Crimson Pro', serif;
         font-size: 1.8rem;
-        color: var(--forest-green);
+        color: #1e5128;
         margin: 2rem 0 1rem 0;
     }
     
@@ -205,10 +217,20 @@
     .timeline-content {
         width: 45%;
         padding: 2rem;
-        background: var(--warm-sand);
+        background: white;
         border-radius: 12px;
         box-shadow: 0 4px 16px rgba(0,0,0,0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid #e0e0e0;
+    }
+    
+    .timeline-content p {
+        color: var(--text-dark);
+        line-height: 1.8;
+    }
+    
+    .timeline-content strong {
+        color: #6B3410;
     }
     
     .timeline-content:hover {
@@ -229,15 +251,16 @@
         align-items: center;
         justify-content: center;
         font-weight: 700;
-        color: var(--rock-grey);
+        color: var(--text-dark);
         box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         z-index: 2;
+        font-size: 1.5rem;
     }
     
     .period-title {
         font-size: 1.3rem;
         font-weight: 700;
-        color: var(--earth-brown);
+        color: #6B3410;
         margin-bottom: 0.5rem;
     }
     
@@ -301,6 +324,11 @@
         overflow: hidden;
     }
     
+    .achievement-card p {
+        color: var(--text-dark);
+        line-height: 1.7;
+    }
+    
     .achievement-card::before {
         content: '';
         position: absolute;
@@ -357,7 +385,7 @@
         cursor: pointer;
         font-size: 1rem;
         font-weight: 600;
-        color: var(--rock-grey);
+        color: var(--text-dark);
         transition: all 0.3s ease;
         font-family: 'Work Sans', sans-serif;
     }
@@ -392,11 +420,21 @@
     }
     
     .mission-card {
-        background: linear-gradient(135deg, var(--warm-sand), white);
+        background: linear-gradient(135deg, white, #fafafa);
         padding: 2rem;
         border-radius: 12px;
         border-left: 4px solid var(--accent-copper);
         box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    
+    .mission-card h3 {
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+    }
+    
+    .mission-card p {
+        color: var(--text-dark);
+        line-height: 1.7;
     }
     
     .mission-number {
@@ -427,6 +465,12 @@
         border-radius: 12px;
         box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         transition: transform 0.3s ease;
+        border: 1px solid #e0e0e0;
+    }
+    
+    .figure-card p {
+        color: var(--text-dark);
+        line-height: 1.6;
     }
     
     .figure-card:hover {
@@ -460,6 +504,8 @@
     li {
         padding: 0.5rem 0 0.5rem 2rem;
         position: relative;
+        color: var(--text-dark);
+        line-height: 1.7;
     }
     
     li::before {
